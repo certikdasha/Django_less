@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    {% include 'add.html' with name='Dasha' %}
+<div style="padding: 20px; background-color: fuchsia"> Extended template index!</div>
+    {% load my_templatetag %}
+<div><a href="{% url 'arch_nmb_name' article_number=0|random_numb slug_name=0|rand_str %}">Random page</a></div>
+<a href="{% url 'first' %}">To the first page</a>
+{% endblock %}

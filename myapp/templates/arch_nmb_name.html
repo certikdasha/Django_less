@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="padding: 20px; background-color: #926cd2">
+{#    {% if number is None %}#}
+{#        number|random_numb#}
+{#    {% endif %}#}
+{#    {% if text is None %}#}
+{#        text|rand_str#}
+{#    {% endif %}#}
+    {% include 'add.html' %}
+    <div style="padding: 10px 10px 10px 20px; background-color: azure"> {{ number }}</div>
+    <a href="{% url 'index' %}" >To the index page</a>
+</div>
+{% endblock %}

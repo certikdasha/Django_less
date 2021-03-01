@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div style="padding: 20px; background-color: #926cd2">
+    {% if number|divisibleby:"2" %}
+        <div> {{ number }} - Четное </div>
+    {% else %}
+        <div>{{ number }} - нечетное </div>
+    {% endif %}
+<a href="{% url 'index' %}" >To the index page</a>
+{#    {% include 'add.html' with name='Daria' %}#}
+
+{% endblock %}
