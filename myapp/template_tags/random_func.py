@@ -19,6 +19,5 @@ def rand_str(value):
     return result_str
 
 
-print('asdasda')
 # register.filter('random_numb', random_numb)
 # register.filter('rand_str', rand_str)
