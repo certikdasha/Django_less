@@ -22,6 +22,7 @@ Including another URLconf
 #     path('', index, name='index')
 # ]
 from django.urls import include, path, re_path
+from django.contrib import admin
 from myapp.views import index, articles, users, archive, id_user, artcl_number
 from myapp.views import cod, arch_nmb_name, tel_nmb, first
 
@@ -39,6 +40,7 @@ from myapp.views import cod, arch_nmb_name, tel_nmb, first
 # ]
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
     path('my_url/', include('myapp.urls')),
     path('', index, name='index'),
     path('acricles/', articles, name='articles'),
